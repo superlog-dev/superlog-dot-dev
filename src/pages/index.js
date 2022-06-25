@@ -6,10 +6,9 @@ export default function Home() {
   return (
     <div className={"bg-0 min-h-screen"}>
       <Head>
-        <title>SmallPR</title>
+        <title>Superlog</title>
         <meta name="description" content="Next generation Git GUI with first class stacked pull requests support" />
         <link rel="icon" href="/favicon.ico" />
-
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://smallpr.dev/" />
         <meta property="og:title" content="SmallPR" />
@@ -24,7 +23,7 @@ export default function Home() {
         <nav className="flex mx-auto items-center h-16 max-w-5xl px-4">
           <div className="w-full flex items-center">
             <a href="/">
-              <span className="text-gray-85 font-bold text-xl">SmallPR</span>
+              <span className="text-gray-85 font-bold text-xl">Superlog</span>
             </a>
           </div>
           <div className="flex space-x-6">
@@ -67,6 +66,9 @@ export default function Home() {
               </svg> */}
               <span className="text-2-on-1 whitespace-nowrap group-hover:text-gray-80">Community</span>
             </a>
+            <a href="https://medium.com/smallpr" className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">
+              About Us
+            </a>
           </div>
         </nav>
       </div>
@@ -75,22 +77,29 @@ export default function Home() {
         <h1 className={"font-bold text-gray-95 text-4xl lg:text-5xl tracking-tight pb-4"}>
           {/* Stay unblocked and <span className="text-blue-55">ship faster</span> */}
           {/* Build better software faster */}
-          {/* Stay unblocked and ship faster */}
+          Stay unblocked and ship faster
           {/* Clean git history */}
           {/* Code review workflow that wont drive you crazy */}
-          Tired of reviewing BIG pull request?
+          {/* Tired of reviewing BIG pull request? */}
         </h1>
 
-        <p className="text-gray-65 pb-20 text-xl lg:text-2xl">
+        {/* <p className="text-gray-65 pb-20 text-xl lg:text-2xl">
           Ask the auther to split it up with SmallPR.{" "}
           <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}>
             It only takes a few clicks!
           </span>
-        </p>
-        {/* <p className="text-gray-65 pb-20 text-xl lg:text-2xl">
+        </p> */}
+        <p className="text-gray-65 pb-20 text-xl lg:text-2xl">
           Next generation Git GUI with first class{" "}
           <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}>
             stacked pull requests support
+          </span>
+        </p>
+
+        {/* <p className="text-gray-65 pb-20 text-xl lg:text-2xl">
+          Git UI for{" "}
+          <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}>
+            stacked pull requests workflow
           </span>
         </p> */}
 
@@ -116,7 +125,7 @@ export default function Home() {
         </p>
         <div className="max-w-5xl mx-auto pb-32">
           <video autoPlay playsInline loop muted className="rounded-md shadow-xl">
-            <source src={"/rebaseTree.mov"} type="video/mp4" />
+            <source src={"/rebaseTree.mp4"} type="video/mp4" />
           </video>
         </div>
 
@@ -137,7 +146,7 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto pb-32">
           <video autoPlay playsInline loop muted className="rounded-md shadow-xl">
-            <source src={"/createPRs.mov"} type="video/mp4" />
+            <source src={"/createPRs.mp4"} type="video/mp4" />
           </video>
         </div>
 
@@ -151,7 +160,7 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto pb-32">
           <video autoPlay playsInline loop muted className="rounded-md shadow-xl">
-            <source src={"/updatePRs.mov"} type="video/mp4" />
+            <source src={"/updatePRs.mp4"} type="video/mp4" />
           </video>
         </div>
       </main>
