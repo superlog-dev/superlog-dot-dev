@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=BTN */
+
+/* ::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+} */
+
+body {
+  color-scheme: dark;
+  background-color: #0e0f0f;
+}
+
+@layer components {
+  /*
+██████   ██████         ██        ██████   ██████  ██████  ██████  ███████ ██████
+██   ██ ██              ██        ██   ██ ██    ██ ██   ██ ██   ██ ██      ██   ██
+██████  ██   ███     ████████     ██████  ██    ██ ██████  ██   ██ █████   ██████
+██   ██ ██    ██     ██  ██       ██   ██ ██    ██ ██   ██ ██   ██ ██      ██   ██
+██████   ██████      ██████       ██████   ██████  ██   ██ ██████  ███████ ██   ██
+                                                                                      */
+
+  .bg-0 {
+    @apply bg-white dark:bg-gray-5;
+  }
+
+  .border-bg-0 {
+    @apply dark:border-gray-15;
+  }
+
+  .bg-1 {
+    @apply bg-white dark:bg-gray-10;
+  }
+
+  .border-bg-1 {
+    @apply dark:border-gray-20;
+  }
+
+  .bg-2 {
+    @apply bg-gray-90 dark:bg-gray-15;
+  }
+
+  .border-bg-2 {
+    @apply dark:border-gray-25;
+  }
+
+  .bg-3 {
+    @apply bg-gray-80 dark:bg-gray-20;
+  }
+
+  .border-bg-3 {
+    @apply dark:border-gray-30;
+  }
+
+  .bg-4 {
+    @apply bg-gray-80 dark:bg-gray-25;
+  }
+
+  .border-bg-4 {
+    @apply dark:border-gray-35;
+  }
+
+  /*
+████████ ███████ ██   ██ ████████
+   ██    ██       ██ ██     ██
+   ██    █████     ███      ██
+   ██    ██       ██ ██     ██
+   ██    ███████ ██   ██    ██
+                                     */
+
+  .text-selection {
+    @apply dark:selection:bg-blue-5530 dark:selection:text-gray-80;
+  }
+
+  .text-1-on-1 {
+    @apply text-selection text-gray-5 dark:text-gray-70;
+  }
+
+  .text-1-on-2 {
+    /* Current revision title */
+    @apply text-selection text-gray-15 dark:text-gray-75;
+  }
+
+  .text-1-on-3 {
+    @apply text-selection text-gray-25 dark:text-gray-75;
+  }
+
+  .text-1-on-4 {
+    @apply text-selection text-gray-25 dark:text-gray-75;
+  }
+
+  .text-2-on-1 {
+    @apply text-selection text-gray-15 dark:text-gray-65;
+  }
+
+  .text-2-on-2 {
+    /* repo title */
+    @apply text-selection text-gray-25 dark:text-gray-65;
+  }
+
+  .text-2-on-3 {
+    @apply text-selection text-gray-35 dark:text-gray-65;
+  }
+
+  .text-3-on-0 {
+    @apply text-selection text-gray-25 dark:text-gray-40;
+  }
+
+  .text-3-on-1 {
+    /* Other revision title & repo selector folder */
+    @apply text-selection text-gray-25 dark:text-gray-40;
+  }
+
+  .text-btn-3-on-1 {
+    /* Create PR */
+    @apply text-selection text-gray-15 dark:text-gray-30;
+  }
+
+  .text-3-on-2 {
+    /* "Current Repo" description & inactive branch */
+    @apply text-selection text-gray-35 dark:text-gray-45;
+  }
+
+  .text-4-on-2 {
+    /* "Current Repo" description & inactive branch */
+    @apply text-selection text-gray-35 dark:text-gray-35;
+  }
+
+  .text-3-on-3 {
+    @apply text-selection text-gray-45 dark:text-gray-35;
+  }
+
+  .text-link {
+    @apply text-blue-60 dark:text-blue-60;
+  }
+
+  /*
+██████  ████████ ███    ██
+██   ██    ██    ████   ██
+██████     ██    ██ ██  ██
+██   ██    ██    ██  ██ ██
+██████     ██    ██   ████
+                              */
+
+  .btn {
+    @apply inline-flex items-center rounded-md border transition-all duration-100 active:translate-y-px active:scale-95 active:opacity-75 disabled:translate-y-0 disabled:scale-100 disabled:opacity-75;
+  }
+
+  .btn-hero {
+    @apply text-selection text-gray-85 font-medium;
+
+    @apply border-0 bg-gradient-to-r from-purple-35 to-blue-35;
+    @apply border-0 bg-gradient-to-r hover:from-purple-45 hover:to-blue-45;
+
+    /* Normal */
+    /* @apply bg-2  border-bg-2; */
+    /* Hover */
+    /* @apply hover:bg-3 hover:text-1-on-3 hover:border-bg-3 hover:shadow; */
+  }
+
+  /* Cancel revase */
+  .btn-1-on-1 {
+    /* Normal */
+    @apply bg-2 text-1-on-2 border-bg-2;
+    /* Hover */
+    @apply hover:bg-3 hover:text-1-on-3 hover:border-bg-3 hover:shadow;
+    /* Active */
+    /* @apply active:bg-0 active:border-bg-0 active:text-3-on-0 dark:active:shadow-none; */
+  }
+
+  /* Commit / Amend / Discard Button */
+  .btn-1-on-2 {
+    /* Normal */
+    @apply bg-3 text-2-on-3 border-bg-3;
+    /* Hover */
+    @apply hover:bg-4 hover:text-1-on-4 hover:border-bg-4 hover:shadow;
+    /* Active */
+    /* @apply active:bg-2 active:border-bg-2 active:text-3-on-2 dark:active:shadow-none; */
+  }
+
+  /* [Outline] "Create PR" button on other revision, git pull*/
+  .btn-3-on-1 {
+    /* Normal */
+    @apply bg-1 text-btn-3-on-1 border-bg-1;
+    /* Hover */
+    @apply hover:bg-2 hover:text-1-on-2 hover:border-bg-2 hover:shadow;
+    /* Active */
+    /* @apply active:bg-0 active:border-bg-0 active:text-3-on-0 dark:active:shadow-none; */
+  }
+
+  /* [Outline] Uncommit button and Submit button */
+  .btn-3-on-2 {
+    /* Normal */
+    @apply bg-2 text-3-on-2 border-bg-2;
+    /* Hover */
+    @apply hover:bg-3 hover:text-1-on-3 hover:border-bg-3 hover:shadow;
+    /* Active */
+    /* @apply active:bg-1 active:border-bg-1 active:text-3-on-1 dark:active:shadow-none; */
+  }
+
+  .btn-blue-on-1 {
+    /* Normal */
+    @apply text-blue-700 bg-blue-50 border-blue-300;
+    /* Hover */
+    @apply hover:bg-white hover:text-blue-700 hover:border-blue-300 hover:shadow;
+    /* Active */
+    @apply active:text-blue-700 active:bg-blue-200 active:border-blue-300 active:shadow-none;
+
+    /* Dark Normal */
+    @apply dark:text-neutral-300 dark:bg-blue-700 dark:border-blue-600;
+    /* Dark Hover */
+    @apply dark:hover:text-neutral-200 dark:hover:border-blue-500 dark:hover:bg-blue-650 dark:hover:shadow;
+    /* Dark Active */
+    /* @apply dark:active:text-neutral-400 dark:active:bg-blue-900 dark:active:border-blue-800 dark:active:shadow-none; */
+    /* @apply text-gray-100 bg-blue-600 border-blue-700 rounded-md border  hover:bg-blue-500 hover:shadow active:bg-blue-700 active:shadow-none; */
+  }
+
+  .btn-yellow-on-3 {
+    /* Normal */
+    @apply text-yellow-700 bg-yellow-50 border-yellow-300;
+    /* Hover */
+    @apply hover:bg-white hover:text-yellow-700 hover:border-yellow-300 hover:shadow;
+    /* Active */
+    @apply active:text-yellow-700 active:bg-yellow-200 active:border-yellow-300 active:shadow-none;
+
+    /* Dark Normal */
+    @apply dark:text-neutral-300 dark:bg-yellow-700 dark:border-yellow-600;
+    /* Dark Hover */
+    @apply dark:hover:text-neutral-200 dark:hover:bg-yellow-600 dark:hover:border-yellow-500 dark:hover:shadow;
+    /* Dark Active */
+    @apply dark:active:text-neutral-300 dark:active:bg-yellow-800 dark:active:border-yellow-700 dark:active:shadow-none;
+  }
+
+  .btn-xs {
+    @apply px-3 py-1 text-xs font-medium;
+  }
+
+  /*
+██████   █████  ██████   ██████  ███████
+██   ██ ██   ██ ██   ██ ██       ██
+██████  ███████ ██   ██ ██   ███ █████
+██   ██ ██   ██ ██   ██ ██    ██ ██
+██████  ██   ██ ██████   ██████  ███████
+                                            */
+
+  .badge-active {
+    @apply text-1-on-3 dark:bg-blue-5570;
+  }
+  .badge-inactive {
+    @apply bg-2 text-4-on-2;
+  }
+  .badge-highlight {
+    @apply text-1-on-3 dark:bg-blue-5530;
+  }
+  .badge-preview {
+    @apply text-1-on-3 dark:bg-blue-5530;
+  }
+
+  /*
+██ ███    ██ ██████  ██    ██ ████████
+██ ████   ██ ██   ██ ██    ██    ██
+██ ██ ██  ██ ██████  ██    ██    ██
+██ ██  ██ ██ ██      ██    ██    ██
+██ ██   ████ ██       ██████     ██
+                                          */
+
+  /*
+███    ███ ██ ███████  ██████
+████  ████ ██ ██      ██
+██ ████ ██ ██ ███████ ██
+██  ██  ██ ██      ██ ██
+██      ██ ██ ███████  ██████
+                               */
+
+  .bg-active-option {
+    @apply dark:bg-blue-5530 dark:text-blue-55;
+  }
+  .no-ring {
+    @apply focus:ring-0 focus:ring-offset-0;
+  }
+}
