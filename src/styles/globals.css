@@ -16,16 +16,11 @@
   position: absolute;
 }
 
-/* https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=BTN */
-
-/* ::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-} */
-
 body {
-  color-scheme: dark;
+  /* color-scheme: dark; */
   background-color: #0e0f0f;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1;
 }
 
 @layer components {
@@ -294,5 +289,28 @@ body {
   }
   .no-ring {
     @apply focus:ring-0 focus:ring-offset-0;
+  }
+
+  /* Sidebar */
+  .doc-sidebar-item {
+    @apply cursor-pointer;
+    @apply rounded-md;
+    @apply px-4 py-1.5 my-1;
+  }
+
+  .doc-sidebar-item-1 {
+    @apply text-gray-1560;
+    @apply hover:bg-slate-200;
+    /* @apply mt-8; */
+  }
+
+  .doc-sidebar-item-2 {
+    @apply text-gray-1560;
+    @apply hover:bg-slate-200;
+    @apply ml-4;
+  }
+
+  .doc-sidebar-item-active {
+    @apply text-blue-45 bg-blue-5515 font-semibold hover:bg-blue-5515;
   }
 }

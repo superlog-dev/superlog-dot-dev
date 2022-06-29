@@ -1,0 +1,46 @@
+import { Video, Notice } from "component/docs/DocBlocks";
+
+# Commit and Uncommit
+
+2 things to keep in mind here:
+
+- Making a commit in Superlog will always result in a new branch being created, rather then advancing current branch.
+- Undo a commit is very easy. So instead of using git stash, we recommand just make a commit and later uncommit it.
+
+---
+
+## Commit button
+
+You can select which files and which lines you want to include in your commit.
+
+Suprelog will create a new branch with random generated name evey time you make a commit, but you can provide your deseired branch name as well. This is equivalent to:
+
+<Video src="/commit.mp4" />
+
+<Notice title="Equivalent git commands:">
+
+1. checkout a new branch
+2. git commit
+
+</Notice>
+
+---
+
+## Uncommit button
+
+You can use "Uncommit" button to undo the commit. This is equivalent to:
+
+1. checkout parent branch (will create one if there's none)
+2. soft reset HEAD~1
+3. delete unused branch
+
+<Video src="/uncommit.mp4" />
+
+<Notice title="Equivalent git commands:">
+
+1. checkout parent commit hash
+2. delete unused branch (local & remote)
+3. soft reset HEAD~1
+4. checkout current branch (create )
+
+</Notice>
