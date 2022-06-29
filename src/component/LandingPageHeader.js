@@ -13,6 +13,10 @@ export default function LandingPageHeader({ enableDownload }) {
           <a href="https://medium.com/smallpr" className="text-2-on-1 hover:text-gray-80">
             Blog
           </a>
+
+          <Link href="/docs/essentials" passHref className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">
+            <a className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">Getting Started</a>
+          </Link>
           <a
             className="text-gray-85 group flex items-center space-x-2 transition-all duration-300"
             href="https://join.slack.com/t/smallpr/shared_invite/zt-17hdr0wlv-PJ16YUw6Tz_o6ZYLcrIv~A"
@@ -49,9 +53,6 @@ export default function LandingPageHeader({ enableDownload }) {
               </svg> */}
             <span className="text-2-on-1 whitespace-nowrap group-hover:text-gray-80">Community</span>
           </a>
-          <Link href="/about" passHref className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">
-            <a className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">About Us</a>
-          </Link>
         </div>
       </nav>
     </div>

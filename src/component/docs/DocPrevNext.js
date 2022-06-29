@@ -15,7 +15,7 @@ export default function DocPrevNext() {
   return (
     <div className="flex gap-4 mt-12 mb-24">
       {prevDoc && (
-        <Link href={"/docs/" + prevDoc?.path?.join("/")} passHref>
+        <Link href={"/docs/" + prevDoc?.path?.join("/")} passHref prefetch scroll>
           <div className="border border-slate-300 rounded-lg p-4 flex-1 cursor-pointer">
             <div className="text-slate-600 pb-1">Previous</div>
             <div className="font-semibold text-lg text-blue-45">{"« " + prevDoc?.title}</div>
@@ -23,7 +23,7 @@ export default function DocPrevNext() {
         </Link>
       )}
       {nextDoc && (
-        <Link href={"/docs/" + nextDoc?.path?.join("/")} passHref>
+        <Link href={"/docs/" + nextDoc?.path?.join("/")} passHref prefetch scroll>
           <div className="border border-slate-300 rounded-lg p-4 flex-1 text-right cursor-pointer">
             <div className="text-slate-600 pb-1">Next</div>
             <div className="font-semibold text-lg text-blue-45">{nextDoc?.title + " »"}</div>
