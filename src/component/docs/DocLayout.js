@@ -1,5 +1,6 @@
 import LandingPageHeader from "component/LandingPageHeader";
 import DocSidebar from "component/docs/DocSidebar";
+import DocPrevNext from "component/docs/DocPrevNext";
 
 export default function DocLayout({ children }) {
   return (
@@ -11,7 +12,10 @@ export default function DocLayout({ children }) {
           {/* <div>
             <DocBreadCrumbs />
           </div> */}
-          <div className="text-black bg-white prose ">{children}</div>
+          <div className="text-black bg-white prose ">
+            {children}
+            <DocPrevNext />
+          </div>
         </div>
       </div>
     </div>

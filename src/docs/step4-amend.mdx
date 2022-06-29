@@ -1,16 +1,58 @@
 import { Video, Notice } from "component/docs/DocBlocks";
 
-# Amend and Discard
+# Addressing feedback
 
-Superlog
+<Notice title="What you'll learn" type="tldr">
+
+- How to use "Amend" button to address feedback from code review
+- How to update pull request
+
+</Notice>
 
 ---
 
 ## Amend button
 
-You can use "Amend" button to amend any selected changes into current commit. This is equivalent to:
+Always use "Amend" button to update the commit, instead of making additional commit when addressing feedback from code review.
 
-1. git amend
-2. rebase all the children commit to the newly amended commit
+You can amend any selected changes into current commit.
 
 <Video src="/discard.mp4" />
+
+<Notice title="Equivalent git commands:">
+
+1. git add \(selected changes\)
+2. git amend
+3. git rebase all the children commit to the newly amended commit
+
+</Notice>
+
+<Notice title="Why amend instead of commit?">
+
+Many team has discovered the value of keeping the main branch concise without the intermediate "junk" commits.
+Which is why they would prefer using "Squash and merge" option when merging the pull request.
+
+If that is the case, maintaining the simple 1 commit per pull request modal, and uses amend to update that 1 commit will have no differences in the end result.
+But the workflow suddenly become much simplier and merge conflicts are easier to resolved.
+
+The downside is that GitHub support for comparing between each force-push is not very good.
+But this is somewhat bearable because people tend to create smaller, easier to reviewed pull request using Superlog.
+
+Alternatively, there are startups like [https://graphite.dev/](https://graphite.dev/) and [https://www.crocodile.dev/](https://www.crocodile.dev/) that are improving the code review process and have better support over stacked pull request and force pushes.
+
+</Notice>
+
+---
+
+## Update Pull Request
+
+You pull request can become stale after you rebase or amend the commit. Either way, you can use "Update PR" button to update it.
+
+<Video src="/updatePRs.mp4" />
+
+<Notice title="Equivalent git commands:">
+
+1. git push --force \<current branch\>
+2. git push --force \<parent branch\>
+
+</Notice>
