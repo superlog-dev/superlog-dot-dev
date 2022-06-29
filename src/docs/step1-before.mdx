@@ -1,23 +1,18 @@
 import { Video, Notice } from "component/docs/DocBlocks";
 
-# Before you start coding
+# Before you start
 
-2 things you should do regularly:
+<Notice title="What you'll learn" type="tldr">
 
-- See which commit are you currently based on.
-- Pull and rebase your unmerged commit
-
-Then just start coding! There's no need to create new branch in advance.
-
-<Notice title="1 commit per branch on-demand">
-
-Superlog is optimized for workflow that has 1 commit per branch. You will be creating a new branch when you are making commit.
+- How to navigate the commit tree
+- How to avoid merge conflict
+- You don't need to create new branch to start your work
 
 </Notice>
 
 ---
 
-## Where am I?
+## Navigating the commit tree
 
 The light blue badge marks the commit you are currently at. Any code changes will be based on that commit.
 
@@ -29,8 +24,34 @@ You can double click or right click on the badge to checkout the commit.
 
 ## Pull and Rebase
 
-The key to minimize potential merge conflicts is to pull and rebase regularly, keeping the differences between your ongoing work and the latest commit in main branch minimal.
+The key to avoid merge conflicts is to pull and rebase regularly, keeping the differences between your ongoing work and the tip of the main branch to the minimal.
 
-Superlog allow you to do this effortlessly.
+You can drag and drop to rebase your commits.
 
 <Video src="/pullAndRebase.mp4" />
+
+---
+
+## Create a new branch first? No need!
+
+Instead of comming up with a new branch name before you start coding, Superlog prefer to defer it to the time of commit.
+
+This means your workflow is simplified to:
+
+1. Start working
+2. Write commit message (and maybe branch name)
+
+... as opposed to:
+
+1. Write branch name
+2. Start working
+3. Write commit message
+4. (Maybe rename the branch)
+
+<Notice title="Under the hood">
+
+Superlog is optimized for workflow that has 1 commit per branch.
+
+This is because we want every single commit to be mergable and reviewable through pull request.
+
+</Notice>

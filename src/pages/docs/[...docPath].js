@@ -3,8 +3,8 @@ import docs from "component/docs/utils/docs";
 import _ from "lodash";
 import Step1 from "docs/step1-before.mdx";
 import Step2 from "docs/step2-commit.mdx";
-import Step3 from "docs/step3-amend-discard.mdx";
-import Step4 from "docs/step3-prepare.mdx";
+import Step3 from "docs/step3-prepare.mdx";
+import Step4 from "docs/step4-amend.mdx";
 
 function DocContent({ doc }) {
   switch (doc.id) {

@@ -28,6 +28,7 @@ function getNoticeColor({ type }) {
       return "border-blue-55";
     case "tips":
     case "success":
+    case "tldr":
       return "border-green-55";
     case "warning":
       return "border-yellow-55";
@@ -40,6 +41,7 @@ function NoticeIcon({ type }) {
   switch (type) {
     case "tips":
     case "success":
+    case "tldr":
       return <LightBulbIcon className="h-6 w-6 text-green-55 flex-shrink-0 mr-3" aria-hidden="true" />;
     default:
       return <InformationCircleIcon className="h-6 w-6 text-blue-55 flex-shrink-0 mr-3" aria-hidden="true" />;
@@ -53,7 +55,7 @@ export function Notice({ children, title, type }) {
         <NoticeIcon type={type} />
         <b>{title}</b>
       </div>
-      <div className="pl-9">{children}</div>
+      <div className="pl-2">{children}</div>
     </div>
   );
 }

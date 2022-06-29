@@ -1,11 +1,15 @@
 import { Video, Notice } from "component/docs/DocBlocks";
 
-# Commit and Uncommit
+# Commit & Uncommit
 
-2 things to keep in mind here:
+<Notice title="What you'll learn" type="tldr">
 
-- Making a commit in Superlog will always result in a new branch being created, rather then advancing current branch.
-- Undo a commit is very easy. So instead of using git stash, we recommand just make a commit and later uncommit it.
+- How does commit button work
+- How does uncommit button work
+- Alternative to git stash
+- How to discard changes
+
+</Notice>
 
 ---
 
@@ -44,3 +48,19 @@ You can use "Uncommit" button to undo the commit. This is equivalent to:
 4. checkout current branch (create )
 
 </Notice>
+
+---
+
+## Git stash
+
+There's no support for git stash in Superlog, because you can simply make a commit and uncommit it later.
+
+---
+
+## Discard button
+
+You can use "Discard" button to discard any selected changes.
+
+Discard is not a recoverable operation, but your IDE might be able to undo the discard.
+
+<Video src="/discard.mp4" />
