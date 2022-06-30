@@ -16,8 +16,8 @@ export default function LandingPageHeader({ enableDownload }) {
         <div className="flex space-x-6">
           <Link href="/docs/essentials" passHref>
             <a
-              className={`text-2-on-1 hover:text-gray-80 whitespace-nowrap hidden ${
-                router.pathname.startsWith("/docs") ? "sm:block" : ""
+              className={`text-2-on-1 hover:text-gray-80 whitespace-nowrap ${
+                router.pathname.startsWith("/docs") ? "hidden sm:block" : ""
               }`}
             >
               Getting Started
