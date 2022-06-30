@@ -4,20 +4,20 @@ import DocPrevNext from "component/docs/DocPrevNext";
 
 export default function DocLayout({ children }) {
   return (
-    <div className="">
+    <div className="dark">
       <LandingPageHeader />
-      <div className="bg-white flex h-[calc(100vh_-_4rem)] w-screen">
-        <DocSidebar />
-        <div className="flex flex-col flex-1 overflow-scroll px-12 py-8 ">
-          {/* <div>
-            <DocBreadCrumbs />
-          </div> */}
-          <div className="text-black bg-white prose ">
+      <div className="flex justify-center max-w-6xl mx-auto bg-0">
+        <div className="hidden md:block sticky w-72 px-2 py-8 mr-8 h-[calc(100vh_-_4rem)] top-16 text-sm flex-shrink-0">
+          <DocSidebar />
+        </div>
+        <div className="flex flex-col px-4 py-8 overflow-scroll prose max-w-none bg-0 dark:prose-invert prose-h1:text-1-on-1 prose-h2:text-1-on-1 prose-h2:text-3xl">
+          <div className="">
             {children}
             <DocPrevNext />
           </div>
         </div>
       </div>
+      <div className="">Footer</div>
     </div>
   );
 }

@@ -1,24 +1,33 @@
 // import PrimaryDownloadButton from "landing-page/PrimaryDownloadButton";
+import { useRouter } from "next/router";
 import Link from "next/link";
+
 export default function LandingPageHeader({ enableDownload }) {
+  const router = useRouter();
+  console.log("router.query.docPath,", router.pathname.startsWith("/docs"));
   return (
-    <div className="z-20 sticky w-screen bg-0 top-0 backdrop-blur bg-opacity-80 border-bg-1 border-b">
-      <nav className="flex mx-auto items-center h-16 max-w-5xl px-4">
-        <div className="w-full flex items-center">
+    <div className="sticky top-0 z-20 w-screen border-b bg-0 backdrop-blur bg-opacity-80 border-bg-1">
+      <nav className="flex items-center h-16 max-w-6xl px-4 mx-auto">
+        <div className="flex items-center w-full">
           <Link href="/" passHref>
-            <a className="text-gray-85 font-bold text-xl">Superlog</a>
+            <a className="text-xl font-bold text-gray-85">Superlog</a>
           </Link>
         </div>
         <div className="flex space-x-6">
+          <Link href="/docs/essentials" passHref>
+            <a
+              className={`text-2-on-1 hover:text-gray-80 whitespace-nowrap hidden ${
+                router.pathname.startsWith("/docs") ? "sm:block" : ""
+              }`}
+            >
+              Getting Started
+            </a>
+          </Link>
           <a href="https://medium.com/smallpr" className="text-2-on-1 hover:text-gray-80">
             Blog
           </a>
-
-          <Link href="/docs/essentials" passHref className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">
-            <a className="text-2-on-1 hover:text-gray-80 whitespace-nowrap">Getting Started</a>
-          </Link>
           <a
-            className="text-gray-85 group flex items-center space-x-2 transition-all duration-300"
+            className="flex items-center space-x-2 transition-all duration-300 text-gray-85 group"
             href="https://join.slack.com/t/smallpr/shared_invite/zt-17hdr0wlv-PJ16YUw6Tz_o6ZYLcrIv~A"
             target="_blank"
             rel="noreferrer"

@@ -85,7 +85,7 @@ body {
   }
 
   .text-1-on-1 {
-    @apply text-selection text-gray-5 dark:text-gray-70;
+    @apply text-selection text-gray-5 dark:text-gray-80;
   }
 
   .text-1-on-2 {
@@ -120,7 +120,7 @@ body {
 
   .text-3-on-1 {
     /* Other revision title & repo selector folder */
-    @apply text-selection text-gray-25 dark:text-gray-40;
+    @apply text-selection text-gray-25 dark:text-gray-50;
   }
 
   .text-btn-3-on-1 {
@@ -296,21 +296,22 @@ body {
     @apply cursor-pointer;
     @apply rounded-md;
     @apply px-4 py-1.5 my-1;
+    @apply hover:text-white;
   }
 
   .doc-sidebar-item-1 {
-    @apply text-gray-1560;
-    @apply hover:bg-slate-200;
+    @apply text-3-on-1;
+    @apply hover:bg-2 hover:text-white;
     /* @apply mt-8; */
   }
 
   .doc-sidebar-item-2 {
-    @apply text-gray-1560;
-    @apply hover:bg-slate-200;
+    @apply text-3-on-1;
+    @apply hover:bg-2 hover:text-white;
     @apply ml-4;
   }
 
   .doc-sidebar-item-active {
-    @apply text-blue-45 bg-blue-5515 font-semibold hover:bg-blue-5515;
+    @apply bg-2 text-1-on-2 font-bold;
   }
 }

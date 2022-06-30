@@ -29,11 +29,11 @@ function getNoticeColor({ type }) {
     case "tips":
     case "success":
     case "tldr":
-      return "border-green-55";
+      return "border-green-35";
     case "warning":
       return "border-yellow-55";
     default:
-      return "border-blue-55";
+      return "border-blue-35";
   }
 }
 
@@ -42,16 +42,20 @@ function NoticeIcon({ type }) {
     case "tips":
     case "success":
     case "tldr":
-      return <LightBulbIcon className="h-6 w-6 text-green-55 flex-shrink-0 mr-3" aria-hidden="true" />;
+      return <LightBulbIcon className="flex-shrink-0 w-6 h-6 mr-3 text-green-45" aria-hidden="true" />;
     default:
-      return <InformationCircleIcon className="h-6 w-6 text-blue-55 flex-shrink-0 mr-3" aria-hidden="true" />;
+      return <InformationCircleIcon className="flex-shrink-0 w-6 h-6 mr-3 text-blue-45" aria-hidden="true" />;
   }
 }
 
 export function Notice({ children, title, type }) {
   return (
-    <div className={`rounded-md bg-slate-100 px-4 mt-8 pt-6 pb-2 border-l-[6px] ${getNoticeColor({ type })}`}>
-      <div className="flex align-middle items-center">
+    <div
+      className={`rounded-md bg-1 px-4 mt-8 pt-6 pb-2 border-l-[6px] ${getNoticeColor({
+        type,
+      })}`}
+    >
+      <div className="flex items-center align-middle">
         <NoticeIcon type={type} />
         <b>{title}</b>
       </div>

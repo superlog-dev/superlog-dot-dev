@@ -5,7 +5,7 @@ import LandingPageHeader from "component/LandingPageHeader";
 
 export default function Home() {
   return (
-    <div className={"bg-0 min-h-screen"}>
+    <div className={"bg-0 min-h-screen dark"}>
       <Head>
         <title>Superlog</title>
         <meta name="description" content="Next generation Git GUI with first class stacked pull requests support" />
@@ -22,7 +22,7 @@ export default function Home() {
 
       <LandingPageHeader />
 
-      <main className="text-center pt-20 px-4">
+      <main className="text-center pt-20 px-4 bg-0">
         <h1 className={"font-bold text-gray-95 text-4xl lg:text-5xl tracking-tight pb-4"}>
           {/* Stay unblocked and <span className="text-blue-55">ship faster</span> */}
           {/* Build better software faster */}
@@ -113,7 +113,6 @@ export default function Home() {
           </video>
         </div>
       </main>
-      <footer className="h-96 text-white"> 123</footer>
     </div>
   );
 }
