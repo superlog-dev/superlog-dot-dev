@@ -1,16 +1,34 @@
 // import PrimaryDownloadButton from "landing-page/PrimaryDownloadButton";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import DocMobileSidebar from "component/docs/DocMobileSidebar";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Fragment, useState } from "react";
 
 export default function LandingPageHeader({ enableDownload }) {
   const router = useRouter();
-  console.log("router.query.docPath,", router.pathname.startsWith("/docs"));
+  const [openSidebar, setOpenSidebar] = useState(false);
+
   return (
     <div className="sticky top-0 z-20 w-screen border-b bg-0 backdrop-blur bg-opacity-80 border-bg-1">
+      <DocMobileSidebar open={openSidebar} setOpen={setOpenSidebar} />
       <nav className="flex items-center h-16 max-w-6xl px-4 mx-auto">
         <div className="flex items-center w-full">
+          {openSidebar ? (
+            <XIcon
+              className="block w-6 h-6 mr-2 text-1-on-1"
+              aria-hidden="true"
+              onClick={() => setOpenSidebar(false)}
+            />
+          ) : (
+            <MenuIcon
+              className="block w-6 h-6 mr-2 text-1-on-1"
+              aria-hidden="true"
+              onClick={() => setOpenSidebar(true)}
+            />
+          )}
           <Link href="/" passHref>
-            <a className="text-xl font-bold text-gray-85">Superlog</a>
+            <a className="text-xl font-bold text-1-on-1">Superlog</a>
           </Link>
         </div>
         <div className="flex space-x-6">
@@ -20,7 +38,7 @@ export default function LandingPageHeader({ enableDownload }) {
                 router.pathname.startsWith("/docs") ? "hidden sm:block" : ""
               }`}
             >
-              Getting Started
+              Tutorial
             </a>
           </Link>
           <a href="https://medium.com/smallpr" className="text-2-on-1 hover:text-gray-80">

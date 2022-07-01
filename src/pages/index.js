@@ -2,6 +2,7 @@
 import Head from "next/head";
 // import styles from "../styles/Home.module.css";
 import LandingPageHeader from "component/LandingPageHeader";
+import LandingPageFooter from "component/LandingPageFooter";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
 
       <LandingPageHeader />
 
-      <main className="px-4 pt-40 text-center bg-0">
+      <main className="px-4 pt-32 text-center bg-0">
         <h1 className={"font-bold text-gray-95 text-4xl lg:text-5xl tracking-tight pb-4"}>
           {/* Stay unblocked and <span className="text-blue-55">ship faster</span> */}
           {/* Build better software faster */}
@@ -31,7 +32,7 @@ export default function Home() {
 
         <p className="pb-20 text-xl text-gray-65 lg:text-2xl">
           Git GUI for{" "}
-          <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55 whitespace-nowrap">
             Stacked Pull Requests Workflow
           </span>
         </p>
@@ -52,7 +53,7 @@ export default function Home() {
           {/* <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}> */}
           {/* <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}> */}
           {/* <span className={"text-gray-85 font-medium underline decoration-slate-600"}>visualized beautifully</span> */}
-          <span className="text-gray-80 font-medium bg-gradient-to-r from-orangeRed-55 to-blue-55 bg-no-repeat [background-position:0_98%] [background-size:100%_0.1em]">
+          <span className="text-gray-80 font-medium bg-gradient-to-r from-orangeRed-55 to-blue-55 bg-no-repeat [background-position:0_98%] [background-size:100%_0.1em] whitespace-nowrap">
             visualized beautifully
           </span>
         </p>
@@ -72,7 +73,7 @@ export default function Home() {
         <p className="pb-10 text-2xl text-gray-65 lg:text-3xl">
           Push and create pull request{" "}
           {/* <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}> */}
-          <span className="text-gray-80 font-medium bg-gradient-to-r from-orangeRed-55 to-blue-55 bg-no-repeat [background-position:0_98%] [background-size:100%_0.1em]">
+          <span className="text-gray-80 font-medium bg-gradient-to-r from-orangeRed-55 to-blue-55 bg-no-repeat [background-position:0_98%] [background-size:100%_0.1em] whitespace-nowrap">
             with 1-click
           </span>
         </p>
@@ -86,7 +87,7 @@ export default function Home() {
         <p className="pb-10 text-2xl text-gray-65 lg:text-3xl">
           Amend, rebase, then update pull request?{" "}
           {/* <span className={"text-transparent bg-clip-text bg-gradient-to-r from-orangeRed-55 to-blue-55"}> */}
-          <span className="text-gray-80 font-medium bg-gradient-to-r from-orangeRed-55 to-blue-55 bg-no-repeat [background-position:0_98%] [background-size:100%_0.1em]">
+          <span className="text-gray-80 font-medium bg-gradient-to-r from-orangeRed-55 to-blue-55 bg-no-repeat [background-position:0_98%] [background-size:100%_0.1em] whitespace-nowrap">
             Effortlessly
           </span>
         </p>
@@ -96,6 +97,7 @@ export default function Home() {
             <source src={"/updatePRs.mp4"} type="video/mp4" />
           </video>
         </div>
+        <LandingPageFooter />
       </main>
     </div>
   );

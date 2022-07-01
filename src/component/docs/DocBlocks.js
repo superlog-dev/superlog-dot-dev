@@ -14,7 +14,7 @@ export function H3({ children }) {
 
 export function Video({ src }) {
   return (
-    <video autoPlay playsInline loop muted controls className="rounded-md shadow-xl">
+    <video playsInline loop muted controls className="rounded-md shadow-xl">
       <source src={src} type="video/mp4" />
     </video>
   );

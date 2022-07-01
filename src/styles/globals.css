@@ -155,17 +155,17 @@ body {
                               */
 
   .btn {
-    @apply inline-flex items-center rounded-md border transition-all duration-100 active:translate-y-px active:scale-95 active:opacity-75 disabled:translate-y-0 disabled:scale-100 disabled:opacity-75;
+    @apply inline-flex items-center transition-all duration-100 border rounded-md active:translate-y-px active:scale-95 active:opacity-75 disabled:translate-y-0 disabled:scale-100 disabled:opacity-75;
   }
 
   .btn-hero {
-    @apply text-selection text-gray-85 font-medium;
+    @apply font-medium text-selection text-gray-85;
 
     @apply border-0 bg-gradient-to-r from-purple-35 to-blue-35;
     @apply border-0 bg-gradient-to-r hover:from-purple-45 hover:to-blue-45;
 
     /* Normal */
-    /* @apply bg-2  border-bg-2; */
+    /* @apply bg-2 border-bg-2; */
     /* Hover */
     /* @apply hover:bg-3 hover:text-1-on-3 hover:border-bg-3 hover:shadow; */
   }
@@ -212,7 +212,7 @@ body {
 
   .btn-blue-on-1 {
     /* Normal */
-    @apply text-blue-700 bg-blue-50 border-blue-300;
+    @apply text-blue-700 border-blue-300 bg-blue-50;
     /* Hover */
     @apply hover:bg-white hover:text-blue-700 hover:border-blue-300 hover:shadow;
     /* Active */
@@ -224,12 +224,12 @@ body {
     @apply dark:hover:text-neutral-200 dark:hover:border-blue-500 dark:hover:bg-blue-650 dark:hover:shadow;
     /* Dark Active */
     /* @apply dark:active:text-neutral-400 dark:active:bg-blue-900 dark:active:border-blue-800 dark:active:shadow-none; */
-    /* @apply text-gray-100 bg-blue-600 border-blue-700 rounded-md border  hover:bg-blue-500 hover:shadow active:bg-blue-700 active:shadow-none; */
+    /* @apply text-gray-100 bg-blue-600 border border-blue-700 rounded-md hover:bg-blue-500 hover:shadow active:bg-blue-700 active:shadow-none; */
   }
 
   .btn-yellow-on-3 {
     /* Normal */
-    @apply text-yellow-700 bg-yellow-50 border-yellow-300;
+    @apply text-yellow-700 border-yellow-300 bg-yellow-50;
     /* Hover */
     @apply hover:bg-white hover:text-yellow-700 hover:border-yellow-300 hover:shadow;
     /* Active */
@@ -288,7 +288,7 @@ body {
     @apply dark:bg-blue-5530 dark:text-blue-55;
   }
   .no-ring {
-    @apply focus:ring-0 focus:ring-offset-0;
+    @apply ring-0 ring-offset-0 focus:ring-0 focus:ring-offset-0;
   }
 
   /* Sidebar */
@@ -312,6 +312,6 @@ body {
   }
 
   .doc-sidebar-item-active {
-    @apply bg-2 text-1-on-2 font-bold;
+    @apply font-bold bg-2 text-1-on-2;
   }
 }
