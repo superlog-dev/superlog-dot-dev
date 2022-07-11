@@ -14,7 +14,7 @@ export default function LandingPageHeader({ enableDownload }) {
       <DocMobileSidebar open={openSidebar} setOpen={setOpenSidebar} />
       <nav className="flex items-center h-16 max-w-6xl px-4 mx-auto">
         <div className="flex items-center w-full">
-          {openSidebar ? (
+          {/* {openSidebar ? (
             <XIcon
               className="block w-6 h-6 mr-2 text-1-on-1"
               aria-hidden="true"
@@ -26,13 +26,13 @@ export default function LandingPageHeader({ enableDownload }) {
               aria-hidden="true"
               onClick={() => setOpenSidebar(true)}
             />
-          )}
+          )} */}
           <Link href="/" passHref>
             <a className="text-xl font-bold text-1-on-1">Superlog</a>
           </Link>
         </div>
         <div className="flex space-x-6">
-          <Link href="/docs/essentials" passHref>
+          {/* <Link href="/docs/essentials" passHref>
             <a
               className={`text-2-on-1 hover:text-gray-80 whitespace-nowrap ${
                 router.pathname.startsWith("/docs") ? "hidden sm:block" : ""
@@ -40,13 +40,13 @@ export default function LandingPageHeader({ enableDownload }) {
             >
               Tutorial
             </a>
-          </Link>
+          </Link> */}
           <a href="https://medium.com/smallpr" className="text-2-on-1 hover:text-gray-80">
             Blog
           </a>
           <a
             className="flex items-center space-x-2 transition-all duration-300 text-gray-85 group"
-            href="https://join.slack.com/t/smallpr/shared_invite/zt-17hdr0wlv-PJ16YUw6Tz_o6ZYLcrIv~A"
+            href="https://join.slack.com/t/superlog-community/shared_invite/zt-17hdr0wlv-PJ16YUw6Tz_o6ZYLcrIv~A"
             target="_blank"
             rel="noreferrer"
           >
