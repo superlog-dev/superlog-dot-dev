@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
 import axios from "axios";
+import packageVersion from "./packageVersion";
 
 const useLatestGithubReleaseInfo = () => {
-  const [info, setInfo] = useState({ version: "0.22.0" });
+  const [info, setInfo] = useState({ version: packageVersion });
   useEffect(() => {
     (async () => {
       axios.get("https://api.github.com/repos/superlog-dev/superlog-desktop/releases/latest").then((response) => {
