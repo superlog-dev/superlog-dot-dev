@@ -1,8 +1,9 @@
+import DownloadButton from "component/DownloadButton";
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Head from "next/head";
+import LandingPageFooter from "component/LandingPageFooter";
 // import styles from "../styles/Home.module.css";
 import LandingPageHeader from "component/LandingPageHeader";
-import LandingPageFooter from "component/LandingPageFooter";
 
 export default function Home() {
   return (
@@ -38,14 +39,15 @@ export default function Home() {
         </p>
 
         <div className="pb-20">
-          <a
+          <DownloadButton />
+          {/* <a
             className="px-8 py-4 btn btn-hero"
             href="https://forms.gle/yVQoYt11bmYRj9Eu8"
             target={"_blank"}
             rel="noreferrer"
           >
             Download Superlog for Mac
-          </a>
+          </a> */}
         </div>
 
         <p className="pb-10 text-2xl text-gray-65 lg:text-3xl">
