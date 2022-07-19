@@ -2,6 +2,7 @@ import { Popover, Transition } from "@headlessui/react";
 
 import { DownloadIcon } from "@heroicons/react/solid";
 import { Fragment } from "react";
+import amplitude from "amplitude-js";
 import useLatestGithubReleaseInfo from "utils/useLatestGithubReleaseInfo";
 
 export default function Example() {
@@ -29,20 +30,30 @@ export default function Example() {
                     <a
                       href={`https://github.com/superlog-dev/superlog-desktop/releases/download/v${version}/Superlog-${version}.dmg`}
                       className="flex items-center px-4 py-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-3 hover:text-gray-90"
+                      onClick={() => {
+                        amplitude
+                          .getInstance()
+                          .logEvent("download_clicked", { os: "mac-intel", entry_point: "primary", version });
+                      }}
                     >
                       <div className="flex items-center justify-center w-5 h-5">
                         <DownloadIcon aria-hidden="true" />
                       </div>
-                      <div className="ml-4">Mac with Intel chip</div>
+                      <div className="ml-4 select-none">Mac with Intel chip</div>
                     </a>
                     <a
                       href={`https://github.com/superlog-dev/superlog-desktop/releases/download/v${version}/Superlog-${version}-arm64.dmg`}
                       className="flex items-center px-4 py-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-3 hover:text-gray-90"
+                      onClick={() => {
+                        amplitude
+                          .getInstance()
+                          .logEvent("download_clicked", { os: "mac-silicon", entry_point: "primary", version });
+                      }}
                     >
                       <div className="flex items-center justify-center w-5 h-5">
                         <DownloadIcon aria-hidden="true" />
                       </div>
-                      <div className="ml-4">Mac with M1 or M2 chip</div>
+                      <div className="ml-4 select-none">Mac with M1 or M2 chip</div>
                     </a>
                   </div>
                 </div>
