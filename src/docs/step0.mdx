@@ -10,17 +10,18 @@ import { Video, Notice } from "component/docs/DocBlocks";
 
 ---
 
-Superlog is a git GUI app that help you get your code into the main branch fast, easy, and error-free.
+Superlog is a git GUI app that helps you get your code into the main branch fast, easy, and error-free.
 
-This workflow has been battle-tested within engineering team at Facebook for years, but the essential tooling wasn't avaliable for git & GitHub. Until now with Superlog.
+This workflow has been battle-tested within engineering teams at Facebook for years and rarely changes anymore.
+Every engineer I know at Facebook uses this workflow with a tool called interactive-smartlog, which is the main inspriration for Superlog.
 
-This tutorial will demonstrate using Superlog in 5 common phases:
+This tutorial will demonstrate using Superlog in 5 phases of your development workflow:
 
 1. [Before coding](/docs/essentials/1-before-coding)
 2. [After coding](/docs/essentials/2-after-coding)
-3. [Create pull request](/docs/essentials/3-create-pr)
-4. [Iterating on code review feedback](/docs/essentials/4-iterate-on-feedback)
-5. [Merge pull request](/docs/essentials/5-merge-pr)
+3. [Creating pull request](/docs/essentials/3-creating-pr)
+4. [Iterating on code review feedback](/docs/essentials/4-iterating-on-feedback)
+5. [Merging pull request](/docs/essentials/5-merging-pr)
 
 It will take about 10 minutes to finish.
 
@@ -28,9 +29,17 @@ It will take about 10 minutes to finish.
 
 <Notice title="Prerequisites">
 
-You are okay with Superlog enforcing your workflow:
+System-wise:
 
-1. One commit per pull request
-2. Using rebase instead of merge
+- Your code needs to be hosted on GitHub
+- You are able to checkout the repository and work on your local machine
+- You are using Mac
+
+You are okay with Superlog enforcing the workflow to have:
+
+- One commit per pull request
+- Using rebase instead of merge
+
+If all of the above are good, it should be very easy to drop-in Superlog in your workflow.
 
 </Notice>
