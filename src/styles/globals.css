@@ -296,18 +296,18 @@ body {
     @apply cursor-pointer;
     @apply rounded-md;
     @apply px-4 py-1.5 my-1;
-    @apply hover:text-white;
+    @apply hover:text-gray-80;
   }
 
   .doc-sidebar-item-1 {
     @apply text-3-on-1;
-    @apply hover:bg-2 hover:text-white;
+    @apply hover:bg-2 hover:text-gray-80;
     /* @apply mt-8; */
   }
 
   .doc-sidebar-item-2 {
     @apply text-3-on-1;
-    @apply hover:bg-2 hover:text-white;
+    @apply hover:bg-2 hover:text-gray-80;
     @apply ml-4;
   }
 

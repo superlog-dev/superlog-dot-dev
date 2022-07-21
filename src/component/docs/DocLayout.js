@@ -11,7 +11,7 @@ export default function DocLayout({ children }) {
         <div className="hidden md:block sticky w-72 px-2 py-8 mr-8 h-[calc(100vh_-_4rem)] top-16 text-sm flex-shrink-0">
           <DocSidebar />
         </div>
-        <article className="flex-1 px-4 py-8 overflow-scroll prose max-w-none bg-0 dark:prose-invert prose-h1:text-1-on-1 prose-h2:text-1-on-1 prose-h2:text-3xl prose-hr:border-bg-1">
+        <article className="flex-1 px-4 py-8 overflow-scroll prose max-w-none bg-0 dark:prose-invert prose-h1:text-1-on-1 prose-h2:text-1-on-1 prose-h2:text-3xl prose-hr:border-bg-1 prose-a:text-link">
           {children}
           <DocPrevNext />
         </article>
