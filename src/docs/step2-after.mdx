@@ -1,12 +1,13 @@
 import { Video, Notice } from "component/docs/DocBlocks";
 
-# Commit & Uncommit
+# After coding
 
 <Notice title="What you'll learn" type="tldr">
 
-- How does commit button work
-- How does uncommit button work
-- Alternative to git stash
+- Using "Commit" button
+- Using "Uncommit" button
+- How to split a commit
+- How to do git stash
 - How to discard changes
 
 </Notice>
@@ -48,9 +49,19 @@ You can use "Uncommit" button to undo the commit. This is equivalent to:
 
 ---
 
+## Split a commit
+
+You can easily split a commit, even the middle one, by uncommitting it and then commit again.
+
+<Video src="/split.mp4" />
+
+---
+
 ## Git stash
 
 There's no support for git stash in Superlog, because you can simply make a commit and uncommit it later.
+
+<Video src="/stash.mp4" />
 
 ---
 

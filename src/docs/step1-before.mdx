@@ -1,10 +1,10 @@
 import { Video, Notice } from "component/docs/DocBlocks";
 
-# Before you code
+# Before coding
 
 <Notice title="What you'll learn" type="tldr">
 
-- How to navigate the commit tree
+- How to navigate the source tree
 - How to avoid merge conflict
 - You don't need to create new branch to start your work
 
@@ -12,7 +12,7 @@ import { Video, Notice } from "component/docs/DocBlocks";
 
 ---
 
-## Navigating the commit tree
+## Navigate the source tree
 
 The light blue badge marks the commit you are currently at. Any code changes will be based on that commit.
 
@@ -26,32 +26,34 @@ You can double click or right click on the badge to checkout the commit.
 
 The key to avoid merge conflicts is to pull and rebase regularly, keeping the differences between your ongoing work and the tip of the main branch to the minimal.
 
-You can drag and drop to rebase your commits.
+You can use drag-n-drop to rebase your commits, or use the Rebase button as a shortcut.
 
-<Video src="/pullAndRebase.mp4" />
+<Video src="/rebase2ways.mp4" />
 
 ---
 
-## Create a new branch first? No need!
+## Create a new branch before coding? No need!
 
-Instead of comming up with a new branch name before you start coding, Superlog prefer to defer it to the time of commit.
+<Notice title="Wait what?">
+
+Because we want every commit to be mergable and reviewable through pull request:
+
+- Superlog enforce one commit per branch
+
+To make sure you have one commit per branch:
+
+- Superlog enforce creating a new branch whenever you make a commit
+
+</Notice>
 
 This means your workflow is simplified to:
 
-1. Start working
+1. Start coding
 2. Write commit message (and maybe branch name)
 
 ... as opposed to:
 
 1. Write branch name
-2. Start working
+2. Start coding
 3. Write commit message
 4. (Maybe rename the branch)
-
-<Notice title="Under the hood">
-
-Superlog is optimized for workflow that has 1 commit per branch.
-
-This is because we want every single commit to be mergable and reviewable through pull request.
-
-</Notice>

@@ -1,17 +1,18 @@
 import DocLayout from "component/docs/DocLayout";
-import docs from "component/docs/utils/docs";
-import _ from "lodash";
 import Head from "next/head";
-import Essential from "docs/guide.mdx";
+import Step0 from "docs/step0.mdx";
 import Step1 from "docs/step1-before.mdx";
-import Step2 from "docs/step2-commit.mdx";
-import Step3 from "docs/step3-prepare.mdx";
-import Step4 from "docs/step4-amend.mdx";
+import Step2 from "docs/step2-after.mdx";
+import Step3 from "docs/step3-create-pr.mdx";
+import Step4 from "docs/step4-iterate.mdx";
+import Step5 from "docs/step5-shipit.mdx";
+import _ from "lodash";
+import docs from "component/docs/utils/docs";
 
 function DocContent({ doc }) {
   switch (doc.id) {
     case "s0":
-      return <Essential />;
+      return <Step0 />;
     case "s1":
       return <Step1 />;
     case "s2":
@@ -20,6 +21,8 @@ function DocContent({ doc }) {
       return <Step3 />;
     case "s4":
       return <Step4 />;
+    case "s5":
+      return <Step5 />;
     default:
       return <></>;
   }
