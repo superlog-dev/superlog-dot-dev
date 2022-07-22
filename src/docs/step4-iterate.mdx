@@ -29,14 +29,13 @@ You can amend any selected changes into current commit.
 
 <Notice title="Why amend instead of commit?">
 
-Many team has discovered the value of keeping the main branch concise without the intermediate "junk" commits.
-Which is why they would prefer using "Squash and merge" option when merging the pull request.
+Many teams have discovered the value of keeping the main branch concise without the intermediate "junk" commits. Teams might prefer the "Squash and merge" option when merging the pull request.
 
-If that is the case, maintaining the simple 1 commit per pull request modal, and uses amend to update that 1 commit will have no differences in the end result.
-But the workflow suddenly become much simplier and merge conflicts are easier to resolved.
+If that is the case, maintaining the simple 1 commit per pull request modal, and using amend to update that 1 commit will have no differences in the result.
+But the workflow suddenly becomes much simpler, and merge conflicts are easier to resolve.
 
-The downside is that GitHub support for comparing between each force-push is not very good.
-But this is somewhat bearable because people tend to create smaller, easier to reviewed pull request using Superlog.
+The downside is that GitHub support for comparing each force-push is not very good.
+But this is somewhat bearable because people tend to create smaller, easier-to-review pull requests using Superlog.
 
 Alternatively, there are startups like [https://graphite.dev/](https://graphite.dev/) and [https://www.crocodile.dev/](https://www.crocodile.dev/) that are improving the code review process and have better support over stacked pull request and force pushes.
 
