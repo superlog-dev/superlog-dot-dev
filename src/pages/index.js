@@ -4,19 +4,19 @@ import Head from "next/head";
 import LandingPageFooter from "component/LandingPageFooter";
 // import styles from "../styles/Home.module.css";
 import LandingPageHeader from "component/LandingPageHeader";
-import amplitude from "amplitude-js";
-import { useEffect } from "react";
+// import amplitude from "amplitude-js";
+// import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    amplitude.getInstance().init("c6bfad15264e45776f3a93fab4d5df3d", null, {
-      includeReferrer: true,
-      includeGclid: true,
-      includeFbclid: true,
-      logAttributionCapturedEvent: true,
-    });
-    amplitude.getInstance().logEvent("landing_page_loaded");
-  }, []);
+  // useEffect(() => {
+  //   amplitude.getInstance().init("c6bfad15264e45776f3a93fab4d5df3d", null, {
+  //     includeReferrer: true,
+  //     includeGclid: true,
+  //     includeFbclid: true,
+  //     logAttributionCapturedEvent: true,
+  //   });
+  //   amplitude.getInstance().logEvent("landing_page_loaded");
+  // }, []);
   return (
     <div className={"bg-0 min-h-screen dark"}>
       <Head>

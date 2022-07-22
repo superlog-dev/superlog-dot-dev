@@ -4,11 +4,13 @@ import Link from "next/link";
 import DocMobileSidebar from "component/docs/DocMobileSidebar";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Fragment, useState } from "react";
+import useLogger from "utils/useLogger";
 
 export default function LandingPageHeader({ enableDownload }) {
   const router = useRouter();
   const [openSidebar, setOpenSidebar] = useState(false);
   const isDoc = router.pathname.startsWith("/docs");
+  const { logEvent } = useLogger();
 
   return (
     <div className="sticky top-0 z-20 w-screen border-b bg-0 backdrop-blur bg-opacity-80 border-bg-1">
@@ -42,11 +44,22 @@ export default function LandingPageHeader({ enableDownload }) {
               className={`text-2-on-1 hover:text-gray-80 whitespace-nowrap ${
                 router.pathname.startsWith("/docs") ? "hidden sm:block" : ""
               }`}
+              onClick={() => {
+                logEvent("header_tutorial_clicked");
+              }}
             >
               Tutorial
             </a>
           </Link>
-          <a href="https://medium.com/smallpr" className="text-2-on-1 hover:text-gray-80">
+          <a
+            href="https://medium.com/smallpr"
+            className="text-2-on-1 hover:text-gray-80"
+            target="_blank"
+            onClick={() => {
+              logEvent("header_blog_clicked");
+            }}
+            rel="noreferrer"
+          >
             Blog
           </a>
           <a
@@ -54,6 +67,9 @@ export default function LandingPageHeader({ enableDownload }) {
             href="https://join.slack.com/t/superlog-community/shared_invite/zt-17hdr0wlv-PJ16YUw6Tz_o6ZYLcrIv~A"
             target="_blank"
             rel="noreferrer"
+            onClick={() => {
+              logEvent("header_community_clicked");
+            }}
           >
             {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
