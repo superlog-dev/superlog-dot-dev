@@ -39,7 +39,7 @@ export default function Doc({ docPath }) {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://superlog.dev/" />
-        <meta property="og:title" content="Superlog | Docs" />
+        <meta property="og:title" content="Superlog Docs" />
         <meta property="og:image" content="/preview.png" />
         <meta property="og:description" content={doc.title} />
       </Head>
